@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Mood Page</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right,#2c2cbf, #a3a3e6);
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      color: #003366;
+    }
+
+    .container {
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      width: 90%;
+      max-width: 500px;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+    }
+
+    select {
+      margin-top: 20px;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: 1px solid #888;
+      width: 80%;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 25px;
+      font-size: 16px;
+      background-color: #0f0fd6;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>This is your safe page ❤️👻</h1>
+    <p>Select how you're feeling right now:</p>
+
+    <select id="mood">
+      <option value="">-- Choose a mood --</option>
+      <option value="happy.html">Happy 😊</option>
+      <option value="sad.html">Sad 😢</option>
+      <option value="angry.html">Angry 😠</option>
+      <option value="stressed.html">Stressed 😩</option>
+      <option value="lost.html">Lost 😶</option>
+      <option value="anxious.html">Anxious 😰</option>
+      <option value="lonely.html">Lonely 🥺</option>
+      <option value="overwhelmed.html">Overwhelmed 😵</option>
+      <option value="tired.html">Tired 😴</option>
+      <option value="motivated.html">Motivated 🚀</option>
+    </select>
+    <br>
+    <button onclick="goToMood()">Open My Message</button>
+  </div>
+
+  <script>
+    function goToMood() {
+      const selected = document.getElementById('mood').value;
+      if (selected === "") {
+        alert("Please choose a mood 🫶");
+      } else {
+        window.location.href = selected;
+      }
+    }
+  </script>
+</body>
+</html>
